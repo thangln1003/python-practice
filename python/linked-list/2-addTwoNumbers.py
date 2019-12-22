@@ -8,6 +8,8 @@
 # Output: 7 -> 0 -> 8
 # Explanation: 342 + 465 = 807.
 
+# TODO: Define sum = x + y + carry, carry = sum//10
+
 from typing import List
 
 
