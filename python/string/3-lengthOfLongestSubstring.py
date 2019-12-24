@@ -11,7 +11,7 @@
 # Explanation: The answer is "b", with the length of 1.
 
 # TODO: Approach 1: Brute Force [O(n*3) & O(1)]
-# TODO: Approach 2: Sliding Window (HashMap)
+# TODO: Approach 2: Sliding Window (HashMap) [O(n*m) & O(k)]
 # TODO: Approach 3: Sliding Window Optimized (HashMap)
 
 
@@ -35,9 +35,18 @@ class Solution:
         return maxLen
 
     def lengthOfLongestSubstring2(self, s: str) -> int:
-        maxLen = 1
-        
+        n = len(s)
+        maxLen = i = j = 0
+        Dict = {}
 
+        while i < n and j < n:
+            if s[j] not in Dict:
+                Dict[s[j]] = j
+                j += 1
+                maxLen = max(maxLen, j - i)
+            else:
+                del Dict[s[i]]
+                i += 1
 
         return maxLen
 
@@ -61,11 +70,11 @@ class Solution:
 if __name__ == "__main__":
     # input = "abcabcbb"
     # input = "abc"
-    # input = "ac"
+    input = "ac"
     # input = "cc"
-    input = "bbbbb"
+    # input = "bbbbb"
 
     s = Solution()
-    print(s.lengthOfLongestSubstring1(input))
-    # print(s.lengthOfLongestSubstring2(input))
+    # print(s.lengthOfLongestSubstring1(input))
+    print(s.lengthOfLongestSubstring2(input))
     # print(s.lengthOfLongestSubstring3(input))
