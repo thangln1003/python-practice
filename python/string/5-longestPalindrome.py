@@ -35,7 +35,7 @@ def longestPalindrome2(s: str):
     for i in range(len(s)-1):
         sub = ""
         for j in range(len(s[i+1::1])):
-            sub = s[i] + s[i+1:i+j+2:1]
+            sub = s[i] + s[i+1:i+j+2:1] # Bad Performance
             if sub == sub[::-1] and len(sub) > maxLen:
                 maxLen = max(len(sub), maxLen)
                 result = sub
@@ -75,7 +75,7 @@ def expandAroundCenter(s: str, left: int, right: int) -> int:
 
 
 if __name__ == "__main__":
-    # s = "babad"
+    s = "babad"
     # s = "aa"
     # s = "ac"
     # s = "cbbd"
