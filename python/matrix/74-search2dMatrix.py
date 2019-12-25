@@ -36,9 +36,23 @@ class Solution:
         :type int
         :rtype bool
         """
-
-        if not matrix:
+        m = len(matrix)
+        if m == 0:
             return False
+        n = len(matrix)
+        
+        # Binary Search
+        left, right = 0, m * n - 1
+        while left <= right:
+            pivot_idx = (left + right) // 2
+            pivot_element = matrix[pivot_idx // n][pivot_idx % n]
+            if target == pivot_element:
+                return True
+            else:
+                if target < pivot_element:
+                    right = pivot_idx - 1
+                else:
+                    left = pivot_idx + 1
 
         return False
 
@@ -49,7 +63,7 @@ if __name__ == "__main__":
         [10, 11, 16, 20],
         [23, 30, 34, 50]
     ]
-    target = 13
+    target = 30
 
     s = Solution()
     print(s.searchMatrix(matrix, target))
