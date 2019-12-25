@@ -1,4 +1,4 @@
-# Add the given digit to a number stored in a linked list
+# Add the given digit to a number stored in a linked list (Medium)
 # https://www.geeksforgeeks.org/add-the-given-digit-to-a-number-stored-in-a-linked-list/
 
 # Given a linked list which represents an integer number where every node is a digit if the represented integer. 
