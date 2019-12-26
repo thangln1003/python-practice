@@ -21,7 +21,7 @@
 # 1 <= A[i] <= 1000
 # 1 <= K <= 2000
 
-# TODO: Approach 1: using pointers
+# TODO: Approach 1: Using Two Pointers
 
 from typing import List
 

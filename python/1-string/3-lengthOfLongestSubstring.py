@@ -10,10 +10,10 @@
 # Output: 1
 # Explanation: The answer is "b", with the length of 1.
 
-# TODO: Approach 1: Brute Force [O(n*3) & O(1)]
-# TODO: Approach 2: Sliding Window (HashMap) [O(2n) & O(k)] - k is size of the Set
-# TODO: Approach 3: Sliding Window Optimized (HashMap)
-# TODO: Approach 4: Using enumerate() in Python 3 [O(n) & O(1)]
+# TODO: Approach 1: Brute Force                         [O(n*3) & O(1)]
+# TODO: Approach 2: Sliding Window (HashMap)            [O(2n) & O(k)] - k is size of the Set
+# TODO: Approach 3: Sliding Window Optimized (HashMap)  [O(n) & O(k)]
+# TODO: Approach 4: Using enumerate() in Python 3       [O(n) & O(n)]
 
 
 class Solution:

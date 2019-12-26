@@ -30,6 +30,10 @@ class Solution:
 
         return prev
 
+    def reverseList2(self, head: ListNode) -> ListNode:
+        return ListNode(0)
+        
+
     def printList(self, node: ListNode):
         while node is not None:
             print(node.val, end="->")
@@ -52,6 +56,6 @@ if __name__ == "__main__":
     s = Solution()
     s.printList(l1)
 
-    s.reverseList1(l1)
+    reverseList = s.reverseList1(l1)
 
-    s.printList(l1)
+    s.printList(reverseList)
