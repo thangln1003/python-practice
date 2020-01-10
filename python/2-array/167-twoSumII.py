@@ -13,12 +13,12 @@
 
 # TODO: Approach 1: Brute Force  [O(n*2) & O(1)]
 # TODO: Approach 2: One-pass Hash Table [O(n) & O(n)]
-# TODO: Approach 1: Two Pointers [O(n) & O(1)]
+# TODO: Approach 3: Two Pointers [O(n) & O(1)]
 
 from typing import List
 
 class Solution:
-    def twoSum(self, numbers: List[int], target: int) -> List[int]:
+    def twoSum3(self, numbers: List[int], target: int) -> List[int]:
         left, right = 0, len(numbers)-1
 
         while left < right:
@@ -37,4 +37,4 @@ if __name__ == "__main__":
     numners, target = [2,7,11,15], 9
 
     s = Solution()
-    print(s.twoSum(numners, target))
+    print(s.twoSum3(numners, target))

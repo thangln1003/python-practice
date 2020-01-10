@@ -1,9 +1,8 @@
 # 1099. Two Sum Less Than K
+# https://leetcode.com/problems/two-sum-less-than-k/
 
 # Given an array A of integers and integer K, return the maximum S such that there exists i < j with A[i] + A[j] = S and S < K.
 # If no i, j exist satisfying this equation, return -1.
-
-# Example 1:
 
 # Input: A = [34,23,1,24,75,33,54,8], K = 60
 # Output: 58
@@ -21,7 +20,7 @@
 # 1 <= A[i] <= 1000
 # 1 <= K <= 2000
 
-# TODO: Approach 1: Using Two Pointers
+# TODO: Approach 1: Using Two Pointers  [O(N) & O(1)]
 
 from typing import List
 
