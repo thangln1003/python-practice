@@ -17,7 +17,7 @@ def insertionSort(arr):
         arr[j + 1] = key
 
 
-# TODO: Approach 1: Brute Force - using the origal way      [O(N^2) & O(1)]
+# TODO: Approach 1: Brute Force - using the original way      [O(N^2) & O(1)]
 # TODO: Approach 2: Binary Indexed Tree - https://www.geeksforgeeks.org/binary-indexed-tree-or-fenwick-tree-2/
 
 def insertionSort1(arr):
