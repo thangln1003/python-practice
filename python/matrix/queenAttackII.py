@@ -61,7 +61,7 @@ def queenAttack(n, k, r_q, c_q, obstacles) -> int:
     # Left
     totalCount += c_q - cLObstacle - 1 if cLObstacle != -1 else c_q - 1
     # Top
-    totalCount += r_q - rTObstacle - 1 if rTObstacle != -1 else r_q - 1
+    totalCount += rTObstacle - r_q - 1 if rTObstacle != -1 else n - r_q
     # Bottom Left
     # totalCount += c_q - cBLObstacle - 1 if rBLObstacle != -1 else min(c_q - 1, r_q - 1)
     # Bottom Right
@@ -80,7 +80,7 @@ if __name__ == "__main__":
 
     obstacles = [
         [2, 3],
-        [4, 3],
+        [4, 2],
         [5, 5]
     ]
 
