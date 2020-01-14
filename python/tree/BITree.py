@@ -8,32 +8,32 @@ class Solution:
     def low_bit(self, t):
         return t & (-t)
 
-    def getSum(self, BITree, i):
-        s = 0
-        i += 1
+    def getSum(self, BITree, index):
+        _sum = 0
+        index += 1
 
-        while i > 0:
-            s += BITree[i]
-            i -= self.low_bit(i)
+        while index > 0:
+            _sum += BITree[index]
+            index -= self.low_bit(index)
 
-        return s
+        return _sum
 
-    def updatebit(self, BITree, n, i, v):
-        i += 1
+    def add(self, BITree, n, index, val):
+        index += 1
 
-        while i <= n:
-            BITree[i] += v
-            i += self.low_bit(i)
+        while index <= n:
+            BITree[index] += val
+            index += self.low_bit(index)
 
     def construct(self, arr, n):
         BITree = [0]*(n+1)
 
         for i in range(n):
-            self.updatebit(BITree, n, i, arr[i])
+            self.add(BITree, n, i, arr[i])
 
         return BITree
 
-    def getInvCount(self, arr, n):
+    def getInvCount(self, arr):
         invcount = 0  # Initialize result
 
         # Find maximum element in arrays
@@ -41,19 +41,20 @@ class Solution:
 
         # Create a BIT with size equal to maxElement+1
         # (Extra one is used so that elements can be directly be used as index)
+        # for i in range(1, maxElement + 1):
+        #     BITree[i] = 0
         BITree = [0] * (maxElement + 1)
-        for i in range(1, maxElement + 1):
-            BITree[i] = 0
 
-        for i in range(n - 1, -1, -1):
+        for i in range(len(arr) - 1, -1, -1):
             invcount += self.getSum(BITree, arr[i] - 1)
-            self.updatebit(BITree, maxElement, arr[i], 1)
+            self.add(BITree, maxElement, arr[i], 1)
 
         return invcount
 
 
 if __name__ == "__main__":
     arr = [2, 1, 1, 3, 2, 3, 4, 5, 6, 7, 8, 9]
+    # arr = [2, 1, 1, 3, 2]
 
     s = Solution()
 
@@ -65,4 +66,4 @@ if __name__ == "__main__":
     # print("Sum of elements in arr[0..5]" +
     #       " after update is " + str(s.getSum(BITree, 5)))
 
-    print("Inversion Count : ", s.getInvCount(arr, len(arr)))
+    print("Inversion Count : ", s.getInvCount(arr))
