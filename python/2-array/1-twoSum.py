@@ -15,7 +15,7 @@
 from typing import List
 
 class Solution:
-    def twoSum(self, nums: List[int], target: int) -> List[int]:
+    def twoSum3(self, nums: List[int], target: int) -> List[int]:
         Dicts = {}
         
         for i in range(len(nums)):
@@ -32,6 +32,6 @@ if __name__ == "__main__":
     nums, target = [2, 7, 11, 15], 9
 
     s = Solution()
-    print(s.twoSum(nums, target))
+    print(s.twoSum3(nums, target))
 
 
