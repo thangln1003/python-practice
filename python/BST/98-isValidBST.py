@@ -24,25 +24,54 @@
 # Output: false
 # Explanation: The root node's value is 5 but its right child's value is 4.
 
+# TODO: Approach 1: Recursion
+# TODO: Approach 2: Iteration
+# TODO: Approach 3: Depth First Search using stack          [O(N) & O(N)]
+
+from typing import List
+
 
 class TreeNode:
     def __init__(self, x):
         self.val = x
         self.left = None
         self.right = None
-
+        
 
 class Solution:
     def isValidBST(self, root: TreeNode) -> bool:
-        return False
+        stack, inorder = [], float('-inf')
+
+        while stack or root:
+            while root:
+                stack.append(root)
+                root = root.left
+
+            root = stack.pop()
+
+            # If next element in inorder traversal
+            # is smaller than the previous one
+            # that's not BST.
+            if root.val <= inorder:
+                return False
+
+            inorder = root.val
+            root = root.right
+
+        return True
 
 
 if __name__ == "__main__":
     arr = [2, 1, 3]
+    # arr = [3, 1, 5, None, None, 4, 6]
+    # arr = [5, 1, 4, None, None, 3, 6]
+    arr = [5, 1, 4, None, None, 3, 6]
 
-    node = TreeNode(arr[0])
+    # node = TreeNode(arr[0])
+    # node.left = TreeNode(arr[1])
+    # node.right = TreeNode(arr[2])
+    # node.right.left = TreeNode(arr[5])
+    # node.right.right = TreeNode(arr[6])
 
     s = Solution()
-    print(s.isValidBST(node))
-
-    arr = [10,5,15,]
+    print(s.isValidBST(arr))

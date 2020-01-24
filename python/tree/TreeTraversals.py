@@ -1,4 +1,8 @@
-
+# Tree Traversals (InOrder, PreOrder, PostOrder)
+# https://www.geeksforgeeks.org/tree-traversals-inorder-preorder-and-postorder/
+# TODO: Approach 1: Depth
+# Time Complexity: O(N)
+# Auxiliary Space: If we don't consider size of stack for function calls then O(1) otherwise O(N)
 
 class TreeNode:
     def __init__(self, x):
@@ -9,7 +13,7 @@ class TreeNode:
 
 def printPreOrder(root: TreeNode):
     if root:
-        print(root.val)
+        print(root.val, end=" ")
         printPreOrder(root.left)
         printPreOrder(root.right)
 
@@ -17,7 +21,7 @@ def printPreOrder(root: TreeNode):
 def printInOrder(root: TreeNode):
     if root:
         printInOrder(root.left)
-        print(root.val)
+        print(root.val, end=" ")
         printInOrder(root.right)
 
 
@@ -25,7 +29,7 @@ def printPostOrder(root: TreeNode):
     if root:
         printPostOrder(root.left)
         printPostOrder(root.right)
-        print(root.val)
+        print(root.val, end=" ")
 
 
 if __name__ == "__main__":
