@@ -24,7 +24,7 @@ def nonDivisibleSubset(k, s):
     if len(d[0]) > 0:
         count = 1
 
-    _set = set([(x, k-x) for x in range(1, k//2+1)])
+    _set = set([(x, k-x) for x in range(1, k//2 + 1)])
 
     for i, j in _set:
         if i != j:
@@ -43,6 +43,9 @@ if __name__ == "__main__":
     # arr, k = [1, 7, 2, 4], 3
     arr, k = [19, 10, 12, 10, 24, 25, 22], 4
     n = len(arr)
+
+    # Example:
+    test = set([(x, k - x) for x in range(1, k//2 + 1)])
 
     result = nonDivisibleSubset(k, arr)
     print(result)
