@@ -14,7 +14,7 @@
 # You may assume k is always valid, 1 ≤ k ≤ number of unique elements.
 # Your algorithm's time complexity must be better than O(n log n), where n is the array's size.
 
-# TODO: Approach 1: Heap        
+# TODO: Approach 1: Using Heap
 
 from typing import List
 from collections import Counter
