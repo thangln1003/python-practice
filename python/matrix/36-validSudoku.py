@@ -22,17 +22,14 @@ class Solution:
         for row in range(9):
             for col in range(9):
                 num = board[row][col]
-
                 if num != '.':
                     num = int(num)
-                    box_index = (row // 3) * 3 + col // 3
+                    box_index = (row // 3) * 3 + (col // 3)
 
-                    # Keep the current cell value
                     horizontal_lines[row][num] = horizontal_lines[row].get(num, 0) + 1
                     vertical_lines[col][num] = vertical_lines[col].get(num, 0) + 1
                     boxes[box_index][num] = boxes[box_index].get(num, 0) + 1
 
-                    # check if this value has been already seen before
                     if (horizontal_lines[row][num] > 1 or
                         vertical_lines[col][num] > 1 or
                             boxes[box_index][num] > 1):
