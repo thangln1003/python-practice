@@ -1,65 +1,56 @@
-# https://www.geeksforgeeks.org/depth-first-search-or-dfs-for-a-graph/
-# Python program to print DFS traversal for complete graph
-from collections import defaultdict
+# DFS Binary Tree
 
-# This class represents a directed graph using adjacency
-# list representation
+#         1
+#       /   \
+#      2     3
+#    /   \
+#   4     5
 
-
-class Graph:
-
-    # Constructor
-    def __init__(self):
-
-        # default dictionary to store graph
-        self.graph = defaultdict(list)
-
-    # function to add an edge to graph
-    def addEdge(self, u, v):
-        self.graph[u].append(v)
-
-    # A function used by DFS
-    def DFSUtil(self, v, visited):
-
-        # Mark the current node as visited and print it
-        visited[v] = True
-        print(v)
-
-        # Recur for all the vertices adjacent to
-        # this vertex
-        for i in self.graph[v]:
-            if visited[i] == False:
-                self.DFSUtil(i, visited)
-
-    # The function to do DFS traversal. It uses
-    # recursive DFSUtil()
-
-    def DFS(self):
-        V = len(self.graph)  # total vertices
-
-        # Mark all the vertices as not visited
-        visited = [False]*(V)
-
-        # Call the recursive helper function to print
-        # DFS traversal starting from all vertices one
-        # by one
-        for i in range(V):
-            if visited[i] == False:
-                self.DFSUtil(i, visited)
+# Depth First Traversals:
+#   Preorder Traversal  : 1 2 4 5 3
+#   Inorder Traversal   : 4 2 5 1 3
+#   Postorder Traversal : 4 5 2 3 1
 
 
-# Driver code
+class TreeNode:
+    def __init__(self, x):
+        self.val = x
+        self.left = None
+        self.right = None
+
+
+def preOrder(root: TreeNode):
+    if root:
+        print(root.val, end=" ")
+        preOrder(root.left)
+        preOrder(root.right)
+
+
+def inOrder(root: TreeNode):
+    if root:
+        inOrder(root.left)
+        print(root.val, end=" ")
+        inOrder(root.right)
+
+
+def postOrder(root: TreeNode):
+    if root:
+        postOrder(root.left)
+        postOrder(root.right)
+        print(root.val, end=" ")
+
+
 if __name__ == "__main__":
-    # Create a graph given in the above diagram
-    g = Graph()
-    g.addEdge(0, 1)
-    g.addEdge(0, 2)
-    g.addEdge(1, 2)
-    g.addEdge(2, 0)
-    g.addEdge(2, 3)
-    g.addEdge(3, 3)
+    root = TreeNode(1)
+    root.left = TreeNode(2)
+    root.right = TreeNode(3)
+    root.left.left = TreeNode(4)
+    root.left.right = TreeNode(5)
 
-    print("Following is Depth First Traversal")
-    g.DFS()
-
-# This code is contributed by Neelam Yadav
+    print("PreOrder: ", end=" ")
+    preOrder(root)
+    print("\nInOrder: ", end=" ")
+    inOrder(root)
+    print("\nPostOrder: ", end=" ")
+    postOrder(root)
+    print("\n")

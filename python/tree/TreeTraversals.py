@@ -1,6 +1,6 @@
 # Tree Traversals (InOrder, PreOrder, PostOrder)
 # https://www.geeksforgeeks.org/tree-traversals-inorder-preorder-and-postorder/
-# TODO: Approach 1: Depth
+# TODO: Approach 1: Depth First Traversals
 # Time Complexity: O(N)
 # Auxiliary Space: If we don't consider size of stack for function calls then O(1) otherwise O(N)
 
