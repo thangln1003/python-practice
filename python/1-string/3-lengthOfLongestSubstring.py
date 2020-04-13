@@ -35,6 +35,17 @@ class Solution:
 
         return maxLen
 
+    def allUnique(self, s: str, start: int, end: int) -> bool:
+        Dict = {}
+        while start < end:
+            char = s[start]
+            if char in Dict:
+                return False
+            Dict[char] = start
+            start += 1
+
+        return True
+
     def lengthOfLongestSubstring2(self, s: str) -> int:
         n = len(s)
         maxLen = i = j = 0
@@ -69,17 +80,6 @@ class Solution:
             Dicts[value] = i
 
         return maxLen
-
-    def allUnique(self, s: str, start: int, end: int) -> bool:
-        Dict = {}
-        while start < end:
-            char = s[start]
-            if char in Dict:
-                return False
-            Dict[char] = start
-            start += 1
-
-        return True
 
 
 if __name__ == "__main__":

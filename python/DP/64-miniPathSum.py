@@ -49,6 +49,7 @@ class Solution:
         for i in range(m):
             if i > 0:
                 grid[i][0] += grid[i-1][0]
+
         for j in range(n):
             if j > 0:
                 grid[0][j] += grid[0][j-1]
