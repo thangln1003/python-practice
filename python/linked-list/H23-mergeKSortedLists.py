@@ -1,15 +1,15 @@
-# 23. Merge K Sorted List (Hard)
-# https://leetcode.com/problems/merge-k-sorted-lists/
+""" 23. Merge K Sorted List (Hard)
+https://leetcode.com/problems/merge-k-sorted-lists/
 
-# Merge K sorted linked lists and return it as one sorted list. Analyze and describe its complexity.
+Merge K sorted linked lists and return it as one sorted list. Analyze and describe its complexity.
 
-# Input:
-# [
-#   1->4->5,
-#   1->3->4,
-#   2->6
-# ]
-# Output: 1->1->2->3->4->4->5->6
+Input:
+[
+  1->4->5,
+  1->3->4,
+  2->6
+]
+Output: 1->1->2->3->4->4->5->6 """
 
 # TODO: Approach 1: Using Min Heap          [O(nk logk) & O(k)]
 # https://leetcode.com/problems/merge-k-sorted-lists/discuss/486481/Python-Using-Min-Heap

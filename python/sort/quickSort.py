@@ -1,10 +1,10 @@
-# Quick Sort is a Devide and Conquer algorithm
-# https://www.geeksforgeeks.org/quick-sort/
+""" Quick Sort is a Devide and Conquer algorithm
+https://www.geeksforgeeks.org/quick-sort/
 
-# 1. Always pick first element as pivot.
-# 2. Always pick last element as pivot. 
-# 3. Pick a random element as pivot.
-# 4. Pick median as pivot.
+1. Always pick first element as pivot.
+2. Always pick last element as pivot. 
+3. Pick a random element as pivot.
+4. Pick median as pivot. """
 
 from typing import List
 

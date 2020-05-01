@@ -1,12 +1,12 @@
-# 206. Reverse Linked List (Easy)
-# https://leetcode.com/problems/reverse-linked-list/
-# Reverse a singly linked list.
+""" 206. Reverse Linked List (Easy)
+https://leetcode.com/problems/reverse-linked-list/
+Reverse a singly linked list.
 
-# Input: 1->2->3->4->5->NULL
-# Output: 5->4->3->2->1->NULL
+Input: 1->2->3->4->5->NULL
+Output: 5->4->3->2->1->NULL
 
-# Follow up:
-# A linked list can be reversed either iteratively or recursively. Could you implement both?
+Follow up:
+A linked list can be reversed either iteratively or recursively. Could you implement both? """
 
 # TODO: Approach 1: Iterative           [O(n) & O(1)] 
 # TODO: Approach 2: Recursive           [O(n) & O(n)]

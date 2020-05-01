@@ -1,11 +1,11 @@
-# 21. Merge Two Sorted Lists (Easy)
-# https://leetcode.com/problems/merge-two-sorted-lists/
+""" 21. Merge Two Sorted Lists (Easy)
+https://leetcode.com/problems/merge-two-sorted-lists/
 
-# Merge two sorted linked lists and return it as a new list. The new list should be made by splicing together the nodes of the first two lists.
+Merge two sorted linked lists and return it as a new list. The new list should be made by splicing together the nodes of the first two lists.
 
-# Example:
-# Input: 1->2->5, 1->3->4
-# Output: 1->1->2->3->4->5
+Example:
+Input: 1->2->5, 1->3->4
+Output: 1->1->2->3->4->5 """
 
 # TODO: Approach 1: Recursion           [O(n+m) & O(n+m)]
 # TODO: Approach 2: Iteration           [O(n+m) & O(1)]

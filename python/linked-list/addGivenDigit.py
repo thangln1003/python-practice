@@ -1,18 +1,18 @@
-# Add the given digit to a number stored in a linked list (Medium)
-# https://www.geeksforgeeks.org/add-the-given-digit-to-a-number-stored-in-a-linked-list/
+""" Add the given digit to a number stored in a linked list (Medium)
+https://www.geeksforgeeks.org/add-the-given-digit-to-a-number-stored-in-a-linked-list/
 
-# Given a linked list which represents an integer number where every node is a digit if the represented integer. 
-# The task is to add a given digit N to the represented integer.
+Given a linked list which represents an integer number where every node is a digit if the represented integer. 
+The task is to add a given digit N to the represented integer.
 
-# Input: 9 -> 9 -> 3 -> NULL, N = 7
-# Output:
-# 9 -> 9 -> 3 -> NULL
-# 1 -> 0 -> 0 -> 0 -> NULL
+Input: 9 -> 9 -> 3 -> NULL, N = 7
+Output:
+9 -> 9 -> 3 -> NULL
+1 -> 0 -> 0 -> 0 -> NULL
 
-# Input: 2 -> 9 -> 9 -> NULL, N = 5
-# Output:
-# 2 -> 9 -> 9 -> NULL
-# 3 -> 0 -> 4 -> NULL
+Input: 2 -> 9 -> 9 -> NULL, N = 5
+Output:
+2 -> 9 -> 9 -> NULL
+3 -> 0 -> 4 -> NULL """
 
 class Node:
     def __init__(self, x):

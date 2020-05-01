@@ -1,27 +1,27 @@
-# 4. Median of Two Sorted Arrays (Hard)
-# https://leetcode.com/problems/median-of-two-sorted-arrays/
-# https://www.geeksforgeeks.org/find-median-of-list-in-python/
+""" 4. Median of Two Sorted Arrays (Hard)
+https://leetcode.com/problems/median-of-two-sorted-arrays/
+https://www.geeksforgeeks.org/find-median-of-list-in-python/
 
-# There are two sorted arrays nums1 and nums2 of size m and n respectively.
-# Find the median of the two sorted arrays. The overall run time complexity should be O(log (m+n)).
-# You may assume nums1 and nums2 cannot be both empty.
+There are two sorted arrays nums1 and nums2 of size m and n respectively.
+Find the median of the two sorted arrays. The overall run time complexity should be O(log (m+n)).
+You may assume nums1 and nums2 cannot be both empty.
 
-# nums1 = [1, 3]
-# nums2 = [2]
-# The median is 2.0
+nums1 = [1, 3]
+nums2 = [2]
+The median is 2.0
 
-# nums1 = [1, 2]
-# nums2 = [3, 4]
-# The median is (2 + 3)/2 = 2.5
-
+nums1 = [1, 2]
+nums2 = [3, 4]
+The median is (2 + 3)/2 = 2.5
+ """
 # TODO: Approach 1: Using sorted()                      [O(NlogN) & O(N)]
 # TODO: Approach 2: Using Interative Solution           [O(log(min(x,y))) & O[1]]
-# Time complexity: O(log(min(x, y))), where x and y are lengths of nums1 & nums2.
-# 1. Pick the shorter array to binary search on, as it would take more time to partition the longer array.
-# 2. Set max and min for left and right partitions on both arrays (set to -inf and +inf when partition is empty).
-# 3. If all elements on the arrays on the left are smaller than those on the right, return the median based on the parity of combined length of the input arrays.
-# 4. If we cut the partition too deep into the right side, move the pivot toward the left. 
-#       And vice versa until we reach a point where all elements in left partitions are smaller than all elements in the right partitions.
+# *Time complexity: O(log(min(x, y))), where x and y are lengths of nums1 & nums2.
+# *1. Pick the shorter array to binary search on, as it would take more time to partition the longer array.
+# *2. Set max and min for left and right partitions on both arrays (set to -inf and +inf when partition is empty).
+# *3. If all elements on the arrays on the left are smaller than those on the right, return the median based on the parity of combined length of the input arrays.
+# *4. If we cut the partition too deep into the right side, move the pivot toward the left. 
+# *     And vice versa until we reach a point where all elements in left partitions are smaller than all elements in the right partitions.
 
 
 from typing import List
