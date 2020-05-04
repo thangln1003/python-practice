@@ -1,6 +1,7 @@
-
+""" Implement Binary Search """
 
 # TODO: Using Iterative Solution            [O(logN) & O(1)]
+
 def binarySearch(arr, left, right, x):
     while left <= right:
         mid = left + (right - left)//2

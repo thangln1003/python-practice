@@ -1,14 +1,15 @@
-# 3. Longest Substring Without Repeating Characters (Medium)
-# https://leetcode.com/problems/longest-substring-without-repeating-characters/
-# Given a string, find the length of the longest substring without repeating characters.
+""" 3. Longest Substring Without Repeating Characters (Medium)
+https://leetcode.com/problems/longest-substring-without-repeating-characters/
+Given a string, find the length of the longest substring without repeating characters.
 
-# Input: "abcabcbb"
-# Output: 3
-# Explanation: The answer is "abc", with the length of 3.
+* Input: "abcabcbb"
+* Output: 3
+* Explanation: The answer is "abc", with the length of 3.
 
-# Input: "bbbbb"
-# Output: 1
-# Explanation: The answer is "b", with the length of 1.
+* Input: "bbbbb"
+* Output: 1
+* Explanation: The answer is "b", with the length of 1.
+ """
 
 # TODO: Approach 1: Brute Force                         [O(n*3) & O(1)]
 # TODO: Approach 2: Sliding Window (HashMap)            [O(2n) & O(k)] - k is size of the Set
@@ -46,6 +47,7 @@ class Solution:
 
         return True
 
+    """ Sliding Windows (HashMap) """
     def lengthOfLongestSubstring2(self, s: str) -> int:
         n = len(s)
         maxLen = i = j = 0
@@ -62,6 +64,7 @@ class Solution:
 
         return maxLen
 
+    """ Using enumerate() in Python """
     def lengthOfLongestSubstring4(self, s: str) -> int:
         maxLen = j = 0
         Dicts = {}

@@ -10,7 +10,7 @@ Given an integer array nums, find the contiguous subarray (containing at least o
 # ? Follow up:
 # ? If you have figured out the O(n) solution, try coding another solution using the divide and conquer approach, which is more subtle.
 
-# TODO: Approach 1: Devide and Conquer                              [O(NlogN) & O(logN)]
+# TODO: Approach 1: Divide and Conquer                              [O(NlogN) & O(logN)]
 # TODO: Approach 2: Greedy                                          [O(N) & O(1)]
 # TODO: Approach 3: Dynamic Programming (Kadane's algorithm)        [O(N) & O(1)]
 

@@ -1,19 +1,19 @@
-# Longest Substring with K Distinct Characters (Medium)
-# https://www.educative.io/courses/grokking-the-coding-interview/YQQwQMWLx80
+""" Longest Substring with K Distinct Characters (Medium)
+https://www.educative.io/courses/grokking-the-coding-interview/YQQwQMWLx80
 
-# Given a string, find the length of the longest substring in it with no more than K distinct characters.
+Given a string, find the length of the longest substring in it with no more than K distinct characters.
 
-# Input: String="araaci", K=2
-# Output: 4
-# Explanation: The longest substring with no more than '2' distinct characters is "araa".
+*Input: String="araaci", K=2
+*Output: 4
+*Explanation: The longest substring with no more than '2' distinct characters is "araa".
 
-# Input: String="araaci", K=1
-# Output: 2
-# Explanation: The longest substring with no more than '1' distinct characters is "aa".
+*Input: String="araaci", K=1
+*Output: 2
+*Explanation: The longest substring with no more than '1' distinct characters is "aa".
 
-# Input: String="cbbebi", K=3
-# Output: 5
-# Explanation: The longest substrings with no more than '3' distinct characters are "cbbeb" & "bbebi".
+*Input: String="cbbebi", K=3
+*Output: 5
+*Explanation: The longest substrings with no more than '3' distinct characters are "cbbeb" & "bbebi". """
 
 # TODO: Approach 1: Sliding Window          [O(n+n) & O(n)]
 
@@ -28,7 +28,7 @@ class Solution:
             if s[i] not in Dicts:
                 Dicts[s[i]] = 0
             Dicts[s[i]] += 1
-            
+
             while len(Dicts) > K:
                 Dicts[s[j]] -= 1
                 if Dicts[s[j]] == 0:
