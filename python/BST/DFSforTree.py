@@ -8,7 +8,7 @@
 
 # Depth First Traversals:
 #   Preorder Traversal  : 1 2 4 5 3
-#   Inorder Traversal   : 4 2 5 1 3
+#   InOrder Traversal   : 4 2 5 1 3
 #   Postorder Traversal : 4 5 2 3 1
 
 

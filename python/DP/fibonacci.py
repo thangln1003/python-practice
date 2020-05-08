@@ -1,6 +1,6 @@
 
 
-# TODO: Approach 1: Brute Force with Recursion      [O(2*n) & O(1)]
+# TODO: Approach 1: Brute Force with Recursion      [O(2^n) & O(1)]
 # TODO: Approach 2: Top-down with Memoization       [O(n) & O(n)]
 # TODO: Approach 3: Bottom-up with Tabulation       [O(n) & O(n)]
 # TODO: Approach 4: Bottom-up without Tabulation    [O(n) & O(1)]
@@ -64,4 +64,4 @@ if __name__ == "__main__":
     # print(s.calculateFibonacci1(num))
     # print(s.calculateFibonacci2(num))
     # print(s.calculateFibonacci3(num))
-    print(s.calculateFibonacci4(num))
+    # print(s.calculateFibonacci4(num))

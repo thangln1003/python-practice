@@ -23,11 +23,11 @@ class Solution:
         for i in range(N):
             index = abs(nums[i]) - 1    # ? Cover case when nums[i] = N
 
-            if nums[index] < 0:         # ? Jump in this index twice
-                result.append(abs(nums[i]))
-            else:
+            if nums[index] > 0:         # ? Jump in this index twice
                 nums[index] = -nums[index]
+                
 
+        print(nums)
         return result
 
 

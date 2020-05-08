@@ -24,7 +24,7 @@ Given a positive integer, output its complement number. The complement strategy 
 
 class Solution:
     def findComplement1(self, num: int) -> int:
-        [p, bit] = num, 1
+        p, bit = num, 1
 
         while p:
             num ^= bit

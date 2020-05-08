@@ -1,16 +1,15 @@
+""" 415. Add Strings (Easy)
+https://leetcode.com/problems/add-strings/
 
-# 415. Add Strings (Easy)
-# https://leetcode.com/problems/add-strings/
+Given two non-negative integers num1 and num2 represented as string, return the sum of num1 and num2.
 
-# Given two non-negative integers num1 and num2 represented as string, return the sum of num1 and num2.
+Note:
+The length of both num1 and num2 is < 5100.
+Both num1 and num2 contains only digits 0-9.
+Both num1 and num2 does not contain any leading zero.
+You must not use any built-in BigInteger library or convert the inputs to integer directly. """
 
-# Note:
-# The length of both num1 and num2 is < 5100.
-# Both num1 and num2 contains only digits 0-9.
-# Both num1 and num2 does not contain any leading zero.
-# You must not use any built-in BigInteger library or convert the inputs to integer directly.
-
-# TODO: Approach 1:
+# TODO: Approach 1: Using two pointers to keep index of 2 numbers
 
 
 class Solution:

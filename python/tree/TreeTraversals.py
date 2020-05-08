@@ -1,8 +1,9 @@
-# Tree Traversals (InOrder, PreOrder, PostOrder)
-# https://www.geeksforgeeks.org/tree-traversals-inorder-preorder-and-postorder/
+""" # Tree Traversals (InOrder, PreOrder, PostOrder)
+# https://www.geeksforgeeks.org/tree-traversals-inorder-preorder-and-postorder/ """
+
 # TODO: Approach 1: Depth First Traversals
-# Time Complexity: O(N)
-# Auxiliary Space: If we don't consider size of stack for function calls then O(1) otherwise O(N)
+# * Time Complexity: O(N)
+# * Auxiliary Space: If we don't consider size of stack for function calls then O(1) otherwise O(N)
 
 class TreeNode:
     def __init__(self, x):
@@ -37,7 +38,7 @@ if __name__ == "__main__":
     root.left = TreeNode(2)
     root.right = TreeNode(3)
     root.left.left = TreeNode(4)
-    root.left.rigt = TreeNode(5)
+    root.left.right = TreeNode(5)
 
     print("\nPreOrder traversal of binary tree is")
     printPreOrder(root)
