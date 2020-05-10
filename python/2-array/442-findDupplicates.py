@@ -10,7 +10,7 @@ Could you do it without extra space and in O(n) runtime?
 *Input: [4, 3, 2, 7, 8, 2, 3, 1]
 *Output: [2, 3] """
 
-# TODO: Based on Constraint, we use negative number to check visited index in array 
+# TODO: Approach 1: Based on Constraint, we use negative number to check visited index in array [O(N) & O(1)]
 
 from typing import List
 
@@ -25,7 +25,6 @@ class Solution:
 
             if nums[index] > 0:         # ? Jump in this index twice
                 nums[index] = -nums[index]
-                
 
         print(nums)
         return result

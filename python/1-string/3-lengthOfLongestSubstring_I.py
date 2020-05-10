@@ -18,7 +18,18 @@ Given a string, find the length of the longest substring without repeating chara
 
 
 class Solution:
+    # TODO: Approach 1: Brute Force                         [O(n*3) & O(1)]
     def lengthOfLongestSubstring1(self, s: str) -> int:
+        def allUnique(s: str, start: int, end: int) -> bool:
+            Dict = {}
+            while start < end:
+                char = s[start]
+                if char in Dict:
+                    return False
+                Dict[char] = start
+                start += 1
+            return True
+
         if len(s) < 1:
             return 0
 
@@ -30,24 +41,14 @@ class Solution:
         for i in range(len(s)-1):
             for j in range(len(s[i+1::1])):
                 # sub = s[i] + s[i+1:i+j+2:1] # Bad performance
-                isValid = self.allUnique(s, i, i + j + 1)
-                if isValid and j - i +1 > maxLen:
+                isValid = allUnique(s, i, i + j + 1)
+                if isValid and j - i + 1 > maxLen:
                     maxLen = max(j - i + 1, maxLen)
 
         return maxLen
 
-    def allUnique(self, s: str, start: int, end: int) -> bool:
-        Dict = {}
-        while start < end:
-            char = s[start]
-            if char in Dict:
-                return False
-            Dict[char] = start
-            start += 1
-
-        return True
-
     """ Sliding Windows (HashMap) """
+
     def lengthOfLongestSubstring2(self, s: str) -> int:
         n = len(s)
         maxLen = i = j = 0
@@ -65,6 +66,7 @@ class Solution:
         return maxLen
 
     """ Using enumerate() in Python """
+
     def lengthOfLongestSubstring4(self, s: str) -> int:
         maxLen = j = 0
         Dicts = {}
