@@ -13,11 +13,13 @@ Given two sorted integer arrays nums1 and nums2, merge nums2 into nums1 as one s
 
 *Output: [1,2,2,3,5,6] """
 
-# TODO: Approach 1: Brute Force         [O((n+m)log(n+m)) & O(1)] - Bad Performance than others
+# TODO: Approach 1: Brute Force                             [O((n+m)log(n+m)) & O(1)] - Bad Performance than others
+# TODO: Approach 2: Two Pointers - Start from beginning     [O(n+m) & O(m)]
+# TODO: Approach 3: Two Pointers - Start from end           [O(n+m) & O(1)]
 
 
 class Solution:
-    def merge(self, nums1: List[int], m: int, nums2: List[int], n: int) -> None:
+    def merge1(self, nums1: List[int], m: int, nums2: List[int], n: int) -> None:
         """
         Do not return anything, modify nums1 in-place instead.
         """
@@ -32,6 +34,9 @@ class Solution:
     def merge2(self, nums1: List[int], m: int, nums2: List[int], n: int) -> None:
         pass
 
+    def merge3(self, nums1: List[int], m: int, nums2: List[int], n: int) -> None:
+        pass
+
 
 if __name__ == "__main__":
     nums1 = [1, 2, 3, 0, 0, 0]
@@ -39,6 +44,8 @@ if __name__ == "__main__":
     m, n = 3, 3
 
     s = Solution()
-    result = s.merge(nums1, m, nums2, n)
+    result1 = s.merge1(nums1, m, nums2, n)
+    result2 = s.merge2(nums1, m, nums2, n)
 
-    print("[Approach 1] Result is {}".format(result))
+    print("[Approach 1] Result is {}".format(result1))
+    print("[Approach 2] Result is {}".format(result1))

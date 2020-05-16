@@ -21,10 +21,12 @@ class Solution:
         N = len(nums)
 
         for i in range(N):
-            index = abs(nums[i]) - 1    # ? Cover case when nums[i] = N
+            index = abs(nums[i]) - 1            # ? Cover case when nums[i] = N
 
-            if nums[index] > 0:         # ? Jump in this index twice
-                nums[index] = -nums[index]
+            if nums[index] < 0:
+                result.append(abs(nums[index]))
+            else:                               # ? Jump in this index twice
+                nums[index] = -1*nums[index]
 
         print(nums)
         return result

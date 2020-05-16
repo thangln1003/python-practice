@@ -14,7 +14,7 @@ You may return any answer array that satisfies this condition.
 !0 <= A[i] <= 5000 """
 
 # TODO: Approach 1: Using Two pointers          [O(N) & O(1)]
-# TODO: Approach 2: One Pash                    [O(N) & O(1)]
+# TODO: Approach 2: One Pass                    [O(N) & O(1)]
 # TODO: Approach 3: Using sorted() with lambda  [O(NlogN) & O(1)]
 
 from typing import List

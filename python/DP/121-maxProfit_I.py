@@ -25,6 +25,7 @@ import sys
 class Solution:
     def maxProfit(self, price: List[int]) -> int:
         INT_MAX = sys.maxsize
+        # INT_MIN = -sys.maxsize
 
         maxProfit = 0
         minPrice = INT_MAX

@@ -15,13 +15,15 @@
 #   [-1, -1, 2]
 # ]
 
-# TODO: Approach 1: Using Two Pointers      [O(n*2) & O(1)]
+# TODO: Approach 1: Brute Force             [O(n*3) & O(1)]
+# TODO: Approach 2: Using Hash Table        [O(n*2) & O(n)]
+# TODO: Approach 2: Using Two Pointers      [O(n*2) & O(1)]
 
 from typing import List
 
 
 class Solution:
-    def threeSum(self, nums: List[int]) -> List[List[int]]:
+    def threeSum2(self, nums: List[int]) -> List[List[int]]:
         if not nums:
             return None
 
@@ -58,5 +60,7 @@ if __name__ == "__main__":
     # nums = [-2, 0, 0, 2, 2]
     nums = [0, 0, 0]
 
+    test = (1 + 9) >> 1
+
     s = Solution()
-    print(s.threeSum(nums))
+    print(s.threeSum2(nums))
