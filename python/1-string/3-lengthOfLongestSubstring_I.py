@@ -88,13 +88,14 @@ class Solution:
 
 
 if __name__ == "__main__":
-    input = "abcabcbb"
+    # input = "abcabcbb"
     # input = "abc"
     # input = "ac"
     # input = "cc"
     # input = "bbbbb"
+    input = "tennhatminhnguyelnabc"  # ? Output = "atminhnguyelnabc"
 
     s = Solution()
     # print(s.lengthOfLongestSubstring1(input))
-    # print(s.lengthOfLongestSubstring2(input))
-    print(s.lengthOfLongestSubstring4(input))
+    print(s.lengthOfLongestSubstring2(input))
+    # print(s.lengthOfLongestSubstring4(input))
