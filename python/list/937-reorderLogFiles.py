@@ -19,14 +19,15 @@ Return the final order of the logs.
 *Output: ["let1 art can","let3 art zero","let2 own kit dig","dig1 8 1 5 1","dig2 3 6"] 
 
 !Constraints:
-0 <= logs.length <= 100
-3 <= logs[i].length <= 100
-logs[i] is guaranteed to have an identifier, and a word after the identifier. """
+!0 <= logs.length <= 100
+!3 <= logs[i].length <= 100
+!logs[i] is guaranteed to have an identifier, and a word after the identifier. """
 
 # TODO: Approach 1: Use sorted() with a custom Sort         [O(AlogA) & O(A)], where A is the total content of logs
 # TODO: Approach 2:
 
 from typing import List
+from collections import Counter
 
 
 class Solution:
@@ -39,6 +40,16 @@ class Solution:
 
         return sorted(logs, key=func)
 
+    def frequencySort(self, s: str) -> str:
+        count = Counter(s)
+        sort = count.most_common()
+        result = ""
+
+        for i in range(len(sort)):
+            result += ''.join([sort[i][0]]*sort[i][1])
+
+        return result
+
 
 if __name__ == "__main__":
     logs = ["dig1 8 1 5 1", "let3 art can", "dig2 3 6",
@@ -47,6 +58,8 @@ if __name__ == "__main__":
 
     s = Solution()
     print(s.reorderLogFiles(logs))
+
+    print(s.frequencySort("Aabbc"))
 
 # !Syntax of sorted()
 # * sorted(iterable, key=None, reverse=False)

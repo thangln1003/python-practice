@@ -10,6 +10,9 @@
     LevelOrder Traversal  : 1 2 3 4 5"""
 
 
+import collections
+
+
 class TreeNode:
     def __init__(self, x):
         self.val = x
@@ -17,9 +20,39 @@ class TreeNode:
         self.right = None
 
 
-def levelOrder(root: TreeNode):
-    if root:
-        print(root.val, end=" ")
+class Solution():
+    def levelOrder1(self, root: TreeNode):
+        if root is None:
+            return None
+
+        queue = []
+        queue.append(root)
+
+        while queue:
+            node = queue.pop(0)
+            print(node.val, end=" ")
+
+            if node.left:
+                queue.append(node.left)
+
+            if node.right:
+                queue.append(node.right)
+
+    def levelOrder2(self, root: TreeNode):
+        levels = []
+
+        def helper(node, level):
+            if node:
+                if len(levels) == level:
+                    levels.append([])
+
+                levels[level] += [node.val]
+
+                helper(node.left, level+1)
+                helper(node.right, level+1)
+
+        helper(root, 0)
+        return levels
 
 
 if __name__ == "__main__":
@@ -29,5 +62,6 @@ if __name__ == "__main__":
     root.left.left = TreeNode(4)
     root.left.right = TreeNode(5)
 
+    s = Solution()
     print("Level Order: ", end=" ")
-    levelOrder(root)
+    s.levelOrder1(root)

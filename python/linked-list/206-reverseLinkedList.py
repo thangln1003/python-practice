@@ -45,13 +45,13 @@ if __name__ == "__main__":
     l1 = ListNode(1)
     second = ListNode(2)
     third = ListNode(3)
-    fouth = ListNode(4)
+    fourth = ListNode(4)
     fifth = ListNode(5)
 
     l1.next = second
     second.next = third
-    third.next = fouth
-    fouth.next = fifth
+    third.next = fourth
+    fourth.next = fifth
 
     s = Solution()
     s.printList(l1)
