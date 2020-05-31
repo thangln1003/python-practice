@@ -3,7 +3,7 @@ https://www.hackerrank.com/challenges/maximizing-xor/problem
  """
 
 # TODO: Approach 1: Brute Force - Using 2 loops         [O(len(l-r)*len(l-r)) & O(1)]s
-# TODO: Approach 2: Using << nad format(number, 'b')    [O(1) & O(1)]
+# TODO: Approach 2: Using << and format(number, 'b')    [O(1) & O(1)]
 
 
 class Solution:

@@ -35,6 +35,7 @@ import collections
 
 
 class Solution:
+    # TODO: Approach 1: Depth First Search          (O(N) & O(N))
     def floodFill(self, image: List[List[int]], sr: int, sc: int, newColor: int) -> List[List[int]]:
         baseValue = image[sr][sc]
 
@@ -52,6 +53,7 @@ class Solution:
 
         return image
 
+    # TODO: Approach 2: Breadth First Search        (O(N) & O(N))
     def floodFill1(self, image: List[List[int]], sr: int, sc: int, newColor: int) -> List[List[int]]:
         baseValue = image[sr][sc]
 

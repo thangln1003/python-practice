@@ -25,22 +25,32 @@ class Solution:
         return result
 
     def maxSubArray2(self, nums: List[int]) -> int:
-        result = 0
+        global_sum, local_sum = 0, float('-inf')
 
-        return result
+        for i in range(len(nums)):
+            local_sum = max(nums[i], nums[i] + local_sum)
+            global_sum = max(global_sum, local_sum)
+
+        return global_sum
 
     def maxSubArray3(self, nums: List[int]) -> int:
-        result = 0
+        max_sum = 0
 
-        return result
+        for i in range(len(nums)):
+            if nums[i-1] > 0:
+                nums[i] += nums[i-1]
+
+            max_sum = max(nums[i], max_sum)
+
+        return max_sum
 
 
 if __name__ == "__main__":
-    nums = [-2, 1, -3, 4, -1, 2, 1, -5, 4]
+    nums = [-2, 1, -3, 4, -1, 2, 1, -5, 4]  # ? Output = 6
 
     s = Solution()
     # result = s.maxSubArray1(nums)
-    result = s.maxSubArray2(nums)
-    # result = s.maxSubArray3(nums)
+    # result = s.maxSubArray2(nums)
+    result = s.maxSubArray3(nums)
 
     print("Result is {}".format(result))
