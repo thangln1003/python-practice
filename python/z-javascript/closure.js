@@ -22,7 +22,7 @@ retirementVietnam(1992);
  *	Then the function finishes, and its execution context get popped off the stack.
  * 	So after the function returns, now the execution context of the retirement() function is effectively gone,
  *  and with it, the variable object and the entire scope chain should be gone, right??? => ACTUALLY, NO.
- *  The secret of clousre is, that even after a function returns, and execution context is gone, THE VARIABLE OBJECT IS STILL THERE. IT'S NOT GONE.
+ *  The secret of closure is, that even after a function returns, and execution context is gone, THE VARIABLE OBJECT IS STILL THERE. IT'S NOT GONE.
  *	It still sits here in memory and it can be accessed, and that's why we still it there in the execution stack on the left side,
  * 	and also in the scope chain on the right side, because the scope chain is in fact a pointer to variable objects, and in this case, the variable object
  *  that we have here on the stack.
